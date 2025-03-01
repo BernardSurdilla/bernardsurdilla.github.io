@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+#main-container {
+    min-width: 100vh;
+    min-height: 100vh;
+}
+#content-section {
+    min-width: 75%;
+    min-height: 100%;
+}
+#navigation-section {
+    min-width: 25%;
+    min-height: 100%;
+    border: solid 4px black ;
+}
+.navigation-item{
+    font-size: 4vh;
+    text-shadow: 1vh 1vh 1vh;
+    transition: font-size 0.5s, text-shadow 0.5s, color 0.25s;
+}
+.navigation-item:hover {
+    cursor: pointer;
+    color: white;
+    font-size: 8vh; 
+    text-shadow: 2vh 2vh 2vh;
+}

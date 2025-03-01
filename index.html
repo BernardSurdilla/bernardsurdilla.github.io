@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link href="bootstrap-5.0.2-dist\css\bootstrap.css" rel="stylesheet" />
+    <link href="scripts\stylesheet.css" rel="stylesheet" />
+    <script src="bootstrap-5.0.2-dist\js\bootstrap.js"></script>
+  </head>
+
+  <body>
+    <div id="main-container" class="d-flex flex-row mw-100">
+      <div
+        id="content-section"
+        class="d-flex justify-content-center align-items-center mw-75 mh-100 bg-primary"
+      >
+      </div>
+      <div
+        id="navigation-section"
+        class="d-flex flex-column justify-content-center mw-25 mh-100 bg-secondary"
+      >
+        <div
+          id="navigation-container"
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <div class="navigation-item" onclick="changeContent(1)">
+            <p>Home</p>
+          </div>
+          <div class="navigation-item" onclick="changeContent(2)">
+            <p>About Me</p>
+          </div>
+          <div class="navigation-item" onclick="changeContent(3)">
+            <p>Projects</p>
+          </div>
+          <div class="navigation-item" onclick="changeContent(4)">
+            <p>Contact</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /**
+       * @param {int} index What kind of content will be shown
+       */
+      function changeContent(index) {
+        const contentDiv = document.getElementById("content-section");
+        while (contentDiv.lastElementChild) {
+          contentDiv.removeChild(contentDiv.lastElementChild);
+        }
+        let newContent = "";
+        switch (index) {
+          case 1:
+            newContent = loadFile("content\\home.html");
+            break;
+        }
+        contentDiv.innerHTML = newContent;
+      }
+
+      function loadFile(filePath) {
+        var result = null;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", filePath, false);
+        xmlhttp.send();
+        if (xmlhttp.status == 200) {
+          result = xmlhttp.responseText;
+        }
+        return result;
+      }
+
+      changeContent(1);
+    </script>
+  </body>
+</html>
