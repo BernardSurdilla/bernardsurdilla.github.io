@@ -1,5 +1,6 @@
 body{
     background-color: black;
+    font-family: Helvetica, Arial, sans-serif
 }
 #main-container {
     min-width: 100vh;
@@ -10,9 +11,10 @@ body{
     min-height: 100%;
 }
 #navigation-section {
+    position: sticky;
     min-width: 25%;
     min-height: 100%;
-    border: solid 4px black ;
+    background-color: rgba(0, 94, 255, 0.125);
 }
 .navigation-item{
     font-size: 4vh;
@@ -25,3 +27,66 @@ body{
     font-size: 8vh; 
     text-shadow: 2vh 2vh 2vh;
 }
+.content-item {
+    margin: 1%;
+    color: white;
+}
+#programming-languages-group{
+    margin: 2%;
+}
+.programming-languages-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 25vh;
+}
+.content-about-me-skill-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    min-width: 33%;
+    min-height: 100%;
+    padding: 2%;
+    margin: 5px;
+    border: 1px solid rgb(3, 77, 174);
+    border-radius: 10%;
+    color: black;
+}
+.content-about-me-skill-card-image {
+    min-height: 75%;
+    width: 75%;
+    height: 75%;
+    
+}
+.content-about-me-skill-card-text {
+    min-width: 25%;
+    text-align: center;
+}
+#programming-languages-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 94, 255, 0.1); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, 0.400); 
+  }

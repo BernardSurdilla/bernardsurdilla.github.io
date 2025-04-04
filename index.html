@@ -8,15 +8,15 @@
   </head>
 
   <body>
-    <div id="main-container" class="d-flex flex-row mw-100">
+    <div id="main-container" class="d-flex flex-row vw-100 vh-100">
       <div
         id="content-section"
-        class="d-flex justify-content-center align-items-center mw-75 mh-100 bg-primary"
+        class="d-flex justify-content-center align-items-center w-75 h-100 overflow-auto flex-wrap"
       >
       </div>
       <div
         id="navigation-section"
-        class="d-flex flex-column justify-content-center mw-25 mh-100 bg-secondary"
+        class="d-flex flex-column justify-content-center w-25 h-100"
       >
         <div
           id="navigation-container"
@@ -51,6 +51,9 @@
           case 1:
             newContent = loadFile("content\\home.html");
             break;
+          case 2:
+            newContent = loadFile("content\\aboutme.html");
+            break;
         }
         contentDiv.innerHTML = newContent;
       }
@@ -66,7 +69,7 @@
         return result;
       }
 
-      changeContent(1);
+      changeContent(2);
     </script>
   </body>
 </html>
