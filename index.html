@@ -12,8 +12,7 @@
       <div
         id="content-section"
         class="d-flex justify-content-center align-items-center w-75 h-100 overflow-auto flex-wrap"
-      >
-      </div>
+      ></div>
       <div
         id="navigation-section"
         class="d-flex flex-column justify-content-center w-25 h-100"
@@ -28,9 +27,9 @@
           <div class="navigation-item" onclick="changeContent(2)">
             <p>About Me</p>
           </div>
-          <div class="navigation-item" onclick="changeContent(3)">
+          <!-- <div class="navigation-item" onclick="changeContent(3)">
             <p>Projects</p>
-          </div>
+          </div> -->
           <div class="navigation-item" onclick="changeContent(4)">
             <p>Contact</p>
           </div>
@@ -54,6 +53,12 @@
           case 2:
             newContent = loadFile("content\\aboutme.html");
             break;
+          case 3:
+            newContent = loadFile("content\\projects.html");
+            break;
+          case 4:
+            newContent = loadFile("content\\contact.html");
+            break;
         }
         contentDiv.innerHTML = newContent;
       }
@@ -69,7 +74,7 @@
         return result;
       }
 
-      changeContent(1);
+      changeContent(4);
     </script>
   </body>
 </html>
